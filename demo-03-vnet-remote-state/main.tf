@@ -29,8 +29,8 @@ provider "azurerm" {
 
 # Resource group for VNet
 resource "azurerm_resource_group" "vnet" {
-  name     = "rg-demo-03-vnet"
-  location = "East US"
+  name     = "rg-demo-03-app"
+  location = "West Central US"
 
   tags = {
     Environment = "Demo"
