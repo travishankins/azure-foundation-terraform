@@ -1,0 +1,49 @@
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars.backup
+.terraform/
+.terraform.lock.hcl
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+terraform.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Azure CLI files
+.azure/
+
+# Backup files
+*.backup
+*.bak
+
+# Azure CLI
+.azure/
+
+# Sensitive data
+secrets/
+private/
