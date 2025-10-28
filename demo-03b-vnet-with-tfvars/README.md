@@ -94,9 +94,6 @@ terraform apply -var-file=prod.tfvars
 
 ### 1. File Organization - versions.tf
 
-💬 **INSTRUCTOR SAYS:**
-"Notice we've separated the Terraform configuration into `versions.tf`. This is a **best practice** that you'll see in professional Terraform projects."
-
 ```hcl
 # versions.tf - All version constraints in one place
 terraform {

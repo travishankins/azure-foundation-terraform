@@ -126,9 +126,6 @@ resource "azapi_resource" "storage_account" {
 }
 ```
 
-💬 **INSTRUCTOR SAYS:**
-"Notice with AzAPI, you specify the exact API version. This means you can use the latest API version the day it comes out, without waiting for a provider update!"
-
 ### 2. Configuration Body
 
 **AzureRM:**
@@ -146,9 +143,6 @@ body = jsonencode({
 })
 ```
 
-💬 **INSTRUCTOR SAYS:**
-"AzAPI uses the exact JSON structure from Azure's ARM API documentation. This means you can copy examples directly from Microsoft docs!"
-
 ### 3. Mixed Provider Usage
 
 **Notice in main.tf:**
@@ -165,9 +159,6 @@ resource "azapi_resource" "storage_account" {
   parent_id = azurerm_resource_group.state.id  # ← References AzureRM resource
 }
 ```
-
-💬 **INSTRUCTOR SAYS:**
-"You can mix both providers! Here we use AzureRM for the resource group (simple) and AzAPI for the storage account (to demonstrate). In real projects, use AzureRM by default and AzAPI only when you need it."
 
 ## 🎓 When to Use Each Provider
 
@@ -274,9 +265,6 @@ data "azurerm_storage_account" "tfstate" {
 }
 ```
 
-💬 **INSTRUCTOR SAYS:**
-"AzAPI can create resources, but some outputs (like access keys) are easier to get via AzureRM data sources. This shows how the two providers work together!"
-
 ## 🎯 Key Takeaways
 
 1. **AzureRM** = Developer-friendly, best for most scenarios
@@ -329,9 +317,6 @@ terraform destroy
 ## 📚 Additional Resources
 
 ### Finding AzAPI Resource Schemas
-
-💬 **INSTRUCTOR SAYS:**
-"You might notice that IntelliSense doesn't help as much with AzAPI. That's because we're using raw JSON from the Azure REST API. The trade-off is we get access to **every** Azure feature immediately, but we lose some developer convenience."
 
 **Here's how to find AzAPI resource schemas:**
 
