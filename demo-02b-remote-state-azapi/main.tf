@@ -36,12 +36,12 @@ resource "azapi_resource" "storage_account" {
     }
     kind = "StorageV2"
     properties = {
-      minimumTlsVersion         = "TLS1_2"
-      allowBlobPublicAccess     = false
-      allowSharedKeyAccess      = true
-      publicNetworkAccess       = "Enabled"
-      supportsHttpsTrafficOnly  = true
-      accessTier                = "Hot"
+      minimumTlsVersion        = "TLS1_2"
+      allowBlobPublicAccess    = false
+      allowSharedKeyAccess     = true
+      publicNetworkAccess      = "Enabled"
+      supportsHttpsTrafficOnly = true
+      accessTier               = "Hot"
     }
   })
 

@@ -135,7 +135,7 @@ module "kv_diagnostic_setting" {
 
   target_resource_id             = module.key-vault.id
   log_analytics_destination_type = "Dedicated"
-  logs_destinations_ids          = [module.log_analytics.id]
+  logs_destinations_ids          = [module.log-analytics-workspace.id]
 }
 
 module "vnet_diagnostic_setting" {
@@ -149,5 +149,5 @@ module "vnet_diagnostic_setting" {
 
   target_resource_id             = module.vnet.id
   log_analytics_destination_type = "Dedicated"
-  logs_destinations_ids          = [module.log_analytics.id]
+  logs_destinations_ids          = [module.log-analytics-workspace.id]
 }

@@ -25,7 +25,7 @@ terraform {
 
 provider "azurerm" {
   features {}
-  
+
   # Use Azure AD for storage backend authentication
   storage_use_azuread = true
 }

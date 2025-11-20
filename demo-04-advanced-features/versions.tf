@@ -15,12 +15,6 @@ terraform {
     }
   }
 
-  backend "azurerm" {
-    resource_group_name  = "rg-terraform-state"
-    storage_account_name = "tfstateXXXXXX" # Replace with your storage account
-    container_name       = "tfstate"
-    key                  = "demo04.tfstate"
-  }
 }
 
 provider "azurerm" {

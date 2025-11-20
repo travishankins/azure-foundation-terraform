@@ -18,7 +18,7 @@ terraform {
 
 provider "azurerm" {
   features {}
-  
+
   # Use Azure AD authentication instead of access keys
   # This is required when subscription policies block key-based authentication
   storage_use_azuread = true
@@ -56,7 +56,7 @@ resource "azurerm_storage_account" "tfstate" {
   min_tls_version                 = "TLS1_2"
   allow_nested_items_to_be_public = false
   shared_access_key_enabled       = true # Required for Terraform backend access
-  
+
   # Allow both key-based and Azure AD authentication
   # Set to false if Azure Policy blocks key-based auth in your subscription
   # In that case, use Azure AD authentication with backend config

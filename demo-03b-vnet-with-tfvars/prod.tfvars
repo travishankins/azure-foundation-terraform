@@ -61,8 +61,8 @@ nsg_rules = [
 ]
 
 tags = {
-  ManagedBy   = "Terraform"
-  Project     = "Demo"
-  CostCenter  = "IT-Production"
-  Compliance  = "Required"
+  ManagedBy  = "Terraform"
+  Project    = "Demo"
+  CostCenter = "IT-Production"
+  Compliance = "Required"
 }

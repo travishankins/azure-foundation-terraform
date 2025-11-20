@@ -26,7 +26,7 @@ provider "azurerm" {
       recover_soft_deleted_key_vaults = true
     }
   }
-  
+
   # Use Azure AD for storage backend authentication
   storage_use_azuread = true
 }

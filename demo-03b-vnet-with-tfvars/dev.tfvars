@@ -24,26 +24,6 @@ subnets = {
   }
 }
 
-vnet_name          = "vnet-demo-04b-dev"
-vnet_address_space = ["10.0.0.0/16"]
-
-# Subnets configuration
-subnets = {
-  web = {
-    name             = "subnet-web"
-    address_prefixes = ["10.0.1.0/24"]
-  }
-  app = {
-    name             = "subnet-app"
-    address_prefixes = ["10.0.2.0/24"]
-  }
-  data = {
-    name             = "subnet-data"
-    address_prefixes = ["10.0.3.0/24"]
-  }
-}
-
-
 nsg_name = "nsg-web-dev"
 
 # NSG Rules - Allow HTTP and HTTPS for dev
@@ -84,7 +64,7 @@ nsg_rules = [
 ]
 
 tags = {
-  ManagedBy   = "Terraform"
-  Project     = "Demo"
-  CostCenter  = "IT-Development"
+  ManagedBy  = "Terraform"
+  Project    = "Demo"
+  CostCenter = "IT-Development"
 }
