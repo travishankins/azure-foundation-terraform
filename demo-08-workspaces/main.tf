@@ -19,7 +19,7 @@ terraform {
   # Single backend configuration - workspaces handle environment separation
   backend "azurerm" {
     resource_group_name  = "rg-terraform-state"
-    storage_account_name = "tfstateXXXXXX" # Replace with your storage account
+    storage_account_name = "tfstatepb4p68" # Replace with your storage account
     container_name       = "tfstate"
     key                  = "demo08-workspaces.tfstate" # Same key, different workspaces
   }
@@ -87,7 +87,7 @@ locals {
       location            = "West US"
       vm_size             = "Standard_D4s_v3"
       instance_count      = 3
-      storage_replication = "GZRS"
+      storage_replication = "GRS"
       enable_backups      = true
       address_space       = "10.30.0.0/16"
       enable_monitoring   = true

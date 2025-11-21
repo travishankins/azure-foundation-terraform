@@ -6,6 +6,9 @@ provider "azurerm" {
       recover_soft_deleted_key_vaults = true
     }
   }
+  
+  # Use Azure AD authentication for storage backend (required when key-based auth is disabled)
+  storage_use_azuread = true
 }
 
 # Provider for random string generator used for resource naming convention

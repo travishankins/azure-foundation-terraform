@@ -29,7 +29,7 @@ provider "azurerm" {
 
 # Resource group for VNet
 resource "azurerm_resource_group" "vnet" {
-  name     = "rg-demo-03-app"
+  name     = "rg-demo-03-app2"
   location = "West Central US"
 
   tags = {
@@ -72,7 +72,7 @@ resource "azurerm_subnet" "subnet3" {
   name                 = "subnet-data"
   resource_group_name  = azurerm_resource_group.vnet.name
   virtual_network_name = azurerm_virtual_network.main.name
-  address_prefixes     = ["10.0.3.0/24"]
+  address_prefixes     = ["10.0.10.0/24"]
 }
 
 # Network Security Group

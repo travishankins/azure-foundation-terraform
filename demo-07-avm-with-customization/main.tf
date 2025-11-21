@@ -18,9 +18,9 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "rg-terraform-state"
-    storage_account_name = "tfstateXXXXXX" # Replace with your storage account
+    storage_account_name = "tfstatepb4p68" # Replace with your storage account
     container_name       = "tfstate"
-    key                  = "demo07-avm-custom.tfstate"
+    key                  = "demo07-avm-custom_prod.tfstate"
   }
 }
 
@@ -221,7 +221,7 @@ module "log_analytics" {
   location            = local.location
 
   # Workspace settings based on environment
-  log_analytics_workspace_retention_in_days          = var.environment == "prod" ? 90 : 30
+  log_analytics_workspace_retention_in_days          = var.environment == "prod" ? 90 : 60
   log_analytics_workspace_daily_quota_gb             = var.environment == "prod" ? 10 : 1
   log_analytics_workspace_internet_ingestion_enabled = true
   log_analytics_workspace_internet_query_enabled     = true
