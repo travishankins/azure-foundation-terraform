@@ -326,10 +326,6 @@ Core security features include:
 - Create an [issue](https://github.com/travishankins/azure-foundation-terraform/issues) for bug reports and feature requests
 ---
 
-## 📄 License
+## ⚖️ License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-**Built with ❤️ following Azure best practices**
