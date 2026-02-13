@@ -21,26 +21,32 @@ This project provides flexible multi-environment foundation infrastructure deplo
 ```
 azure-foundation-terraform/
 ├── README.md
-├── foundation/               # Foundation infrastructure deployment
+├── DEMOS.md                          # Guide to the demo scenarios
+├── AZURE-AD-AUTH-SETUP.md            # Azure AD authentication setup guide
+├── foundation/                       # Foundation infrastructure deployment
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── backend.tf
 │   ├── foundation-dev.tfvars
 │   ├── foundation-uat.tfvars
 │   └── foundation-prod.tfvars
-├── modules/                  # Reusable Terraform modules
+├── modules/                          # Reusable local Terraform modules
 │   ├── compute/
 │   ├── foundation/
 │   ├── monitoring/
 │   ├── networking/
 │   ├── security/
 │   └── storage/
-└── pipelines/               # CI/CD pipeline definitions
-    ├── foundation-infra-pipeline.yml
-    ├── unlock-state.yml
-    └── templates/
-        ├── terraform-build.yml
-        └── terraform-deploy.yml
+├── demo-01-local-state/              # Demo: local state basics
+├── demo-02-remote-state-setup/       # Demo: remote state with Azure Storage
+├── demo-02b-remote-state-azapi/      # Demo: remote state using AzAPI provider
+├── demo-03-vnet-remote-state/        # Demo: VNet with remote state
+├── demo-03b-vnet-with-tfvars/        # Demo: VNet using tfvars files
+├── demo-04-advanced-features/        # Demo: advanced Terraform features
+├── demo-05-custom-modules/           # Demo: consuming local custom modules
+├── demo-06-azure-verified-modules/   # Demo: Azure Verified Modules
+├── demo-07-avm-with-customization/   # Demo: AVM with customization
+└── demo-08-workspaces/               # Demo: Terraform workspaces
 ```
 
 ## 🚀 Deployments
@@ -68,7 +74,7 @@ terraform apply -var-file="foundation-prod.tfvars"
 
 ## 🔧 Module References
 
-This project references modules from the terraform-modules repository:
+This project uses local reusable modules defined in the `modules/` directory:
 
 ```hcl
 module "virtual_network" {
@@ -318,6 +324,12 @@ Core security features include:
 ## 📞 **Support**
 
 - Create an [issue](https://github.com/travishankins/azure-foundation-terraform/issues) for bug reports and feature requests
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ---
 
 **Built with ❤️ following Azure best practices**
